@@ -7,7 +7,7 @@ namespace MyApp
         
         public static void Main()
         {
-            Employee permanentEmployee = new PermanentEmployee()
+            PermanentEmployee permanentEmployee = new PermanentEmployee()
             {
                 Id = 1,
                 Name = "ABC"
