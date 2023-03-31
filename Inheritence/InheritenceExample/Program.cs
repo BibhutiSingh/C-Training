@@ -1,61 +1,26 @@
 ﻿using System;
 
-public class ConstructorExample{
+public class InheritenceExample{
 
     public static void Main(){
-        int? a = 10;
-           int? b=null;
-
-
-        Console.WriteLine($"Sub of A + B ={(a ?? 1)  +  (b ?? 1)}");
-        Students student=new Students(1, "ABC");
-
-
-        //StudentInfo.CurrentStudent = student;
-        StudentInfo.PrintCurrentStudentDetail();
-
+        AppMath math=new AppMath();
+        Console.WriteLine(math.Sum(2,2));
+        Console.WriteLine(math.Sub(2,2));
         Console.ReadKey();
     }  
      
 }
-
-public static class StudentInfo
+public sealed class AppMath
 {
-    public static Students CurrentStudent { get; set; }
-    
-    public static void PrintCurrentStudentDetail()
-    {
-        if(CurrentStudent is null){
-            Console.WriteLine("No student assigned to current student property.");
-        }
-        else{
-        CurrentStudent.PrintStudentDetails();
-        }
+    public int Sum(int a, int b){
+        return a+b;
     }
-    
-    
-}
-public interface IStudent
-{
-    public int RollNumber { get; set; }
-    public string Name { get; set; }
-    public void PrintStudentDetails();    
-    
 }
 
-public class Students : IStudent{
-    public Students(int rollNumber, string name)
-    {
-        RollNumber=rollNumber;
-        Name= name;
+public static class MyExtention{
+    public static int Sub(this AppMath appMath, int a, int b){
+        return a-b;
     }
-    public int  RollNumber { get; set; }   
-    
-    public string Name { get; set; }
-
-    public void PrintStudentDetails(){
-        Console.WriteLine($"{RollNumber}- {Name}");
-    }
-    
-    
 }
+
+
