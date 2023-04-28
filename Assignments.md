@@ -74,7 +74,8 @@ Finish Simple calculator add more operations ( * , / , Mod(%))
 
 Create a MDI Form application. Application should connect to SQLite file or db. Database will have only 1 table called "MyExpense"
 
-Id|ExpenseItem|ExpenseDate|ExpenseAmount
-1| Food | 27-Apr-2023| 300.00
+| Id | ExpeneItem | ExpenseDate | ExpenseAmount |   |
+|----|------------|-------------|---------------|---|
+| 1  | Food       | 23-Apr-2023 | 300.56        |   |
 
 Application should be able to View all expenes in a grid and user can add, update, delete any expense.
